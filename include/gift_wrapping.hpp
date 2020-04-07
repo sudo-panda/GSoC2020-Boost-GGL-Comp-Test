@@ -97,7 +97,8 @@ struct is_farther
     template < typename Point>
     static inline bool apply(Point base_pt, Point ref_pt, Point check_pt)
     {
-        return boost::geometry::distance(base_pt, ref_pt) < boost::geometry::distance(base_pt, check_pt);
+        return boost::geometry::comparable_distance(base_pt, ref_pt) < 
+                boost::geometry::comparable_distance(base_pt, check_pt);
     }
 };
 
